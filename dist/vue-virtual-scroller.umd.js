@@ -1322,7 +1322,6 @@
                         "px)"
                     }
                   : null,
-                attrs: { "aria-hidden": view.position > 0 ? "null" : "true" },
                 on: {
                   mouseenter: function($event) {
                     _vm.hoverKey = view.nr.key;
