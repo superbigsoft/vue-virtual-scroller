@@ -25,8 +25,8 @@
     >
       <div
         v-for="view of pool"
-        :aria-hidden="view.position > 0? null: true"
         :key="view.nr.id"
+        :aria-hidden="view.position > 0? 'null': 'true'"
         :style="ready ? { transform: `translate${direction === 'vertical' ? 'Y' : 'X'}(${view.position}px)` } : null"
         class="vue-recycle-scroller__item-view"
         :class="{ hover: hoverKey === view.nr.key }"
