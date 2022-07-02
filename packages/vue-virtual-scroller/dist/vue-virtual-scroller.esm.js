@@ -670,8 +670,8 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
     }, [
       (openBlock(true), createBlock(Fragment, null, renderList($data.pool, (view) => {
         return (openBlock(), createBlock("div", {
-          "aria-hidden": view.position > 0? 'null': 'true',
           key: view.nr.id,
+          "aria-hidden": view.position >= 0? null: 'true',
           style: $data.ready ? { transform: `translate${_ctx.direction === 'vertical' ? 'Y' : 'X'}(${view.position}px)` } : null,
           class: ["vue-recycle-scroller__item-view", { hover: $data.hoverKey === view.nr.key }],
           onMouseenter: $event => ($data.hoverKey = view.nr.key),

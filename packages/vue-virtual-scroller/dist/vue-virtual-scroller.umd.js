@@ -1097,8 +1097,8 @@
       }, [
         (vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList($data.pool, (view) => {
           return (vue.openBlock(), vue.createBlock("div", {
-            "aria-hidden": view.position > 0? 'null': 'true',
             key: view.nr.id,
+            "aria-hidden": view.position >= 0? null: 'true',
             style: $data.ready ? { transform: `translate${_ctx.direction === 'vertical' ? 'Y' : 'X'}(${view.position}px)` } : null,
             class: ["vue-recycle-scroller__item-view", { hover: $data.hoverKey === view.nr.key }],
             onMouseenter: $event => ($data.hoverKey = view.nr.key),
